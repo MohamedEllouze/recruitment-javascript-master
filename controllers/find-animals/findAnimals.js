@@ -1,19 +1,20 @@
 //Only animals containing the pattern passed as argument (e.g. `ry`) are displayed
 //Empty array after filtering are NOT returned.
 function filter(data, args) {
-  var tabWithEmptyArray = data.map((item) => {
+  const tabWithEmptyArray = data.map((item) => {
     return {
       ...item,
-      people: item.people.map((subitem) => {
+      people: item.people.map((subItem) => {
         return {
-          ...subitem,
-          animals: subitem.animals.filter((subsubitem) =>
-            subsubitem.name.includes(args)
+          ...subItem,
+          animals: subItem.animals.filter((subsubItem) =>
+            subSubItem.name.includes(args)
           ),
         };
       }),
     };
   });
+  //this fuction to return the result without empty arrays
   const result = tabWithEmptyArray.reduce((previousValue, currentValue) => {
     const data = [];
     if (currentValue.people.length > 0) {

@@ -24,4 +24,4 @@ if (args.some((value) => value.includes("--filter"))) {
     })
   );
 }
-if (args.length === 2) console.log("Flag is not present.");
+if (args.length === 2) console.log("there is no chosen function");

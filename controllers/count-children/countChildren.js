@@ -1,7 +1,7 @@
 //this function is to count People and Animals by counting the number of children
 //return the old array and add the number to the name
 function count(data) {
-  var tab = data.map((item) => {
+  const list = data.map((item) => {
     return {
       ...item,
       name: item.name + " [" + item.people.length + "]",
@@ -13,7 +13,7 @@ function count(data) {
       }),
     };
   });
-  return tab;
+  return list;
 }
 
 module.exports = count;
